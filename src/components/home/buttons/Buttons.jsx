@@ -1,19 +1,16 @@
 
+import React, {useState} from "react";
+import styled from "styled-components";
 
 
-
-
-
-function Buttons () {
+function Button ({value}) {
 
     return(
         <>
-            <div className="buttons-div">
-                    <button>Click me</button>
-            </div>
+            <button className="btn">{value}</button>
         </>
     )
 }
 
 
-export default Buttons;
+export default Button;
