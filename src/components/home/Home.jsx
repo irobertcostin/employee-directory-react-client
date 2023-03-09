@@ -33,7 +33,7 @@ function Home() {
     }, [])
 
 
-    let  ButtonTypes = ['Services','Staff','Projects']
+    let  ButtonTypes = ['Services','Projects','Staff']
 
     function ToggleGroup(){
 
@@ -47,7 +47,7 @@ function Home() {
     return (
         <>
             <div className="main">
-            <Marquee gradient={false} speed={80}>/a resource dedicated to storing information about the members of an organization</Marquee>
+            <Marquee gradient={false} speed={80} pauseOnHover={true} delay={3}>/a resource dedicated to storing information about the members of an organization</Marquee>
                 <h1 className="title glow">Service desk employee directory</h1>
                 <div className="buttons-div">
                     {
