@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Employee from "./employee/Employee";
+import Employee from "../employee/Employee";
 import Data from "../../services/Api";
 import Marquee from "react-fast-marquee";
-import Button from "./buttons/Buttons";
+import { Button, DatePicker } from 'antd';
 
 function Home() {
 
@@ -33,11 +33,11 @@ function Home() {
     }, [])
 
 
-    let  ButtonTypes = ['Services','Projects','Staff']
+    let  ButtonTypes = ['Services','Staff','Projects','New employee']
 
     function ToggleGroup(){
 
-        let [active,setActive]=useState(ButtonTypes[0]);
+        let [active,setActive]=useState(ButtonTypes['']);
 
         
     }
@@ -53,7 +53,7 @@ function Home() {
                     {
                         ButtonTypes.length>0 &&
                         ButtonTypes.map(type=>{
-                            return <Button value={type}/>
+                            return <Button type="primary" danger>{type}</Button>
                         })
                     }
                 </div>
