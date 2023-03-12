@@ -42,4 +42,15 @@ export default class Data {
     }
 
 
+    async addEmployee(employee){
+        try {
+            let response = await this.api('/add',"POST",employee)
+            if(response.status==201){
+                console.log("Successfully added")
+            }
+        } catch (error) {
+            console.log("Failed to add employee")
+        }
+    }
+
 }

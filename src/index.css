@@ -26,6 +26,10 @@ img, input, button {
   padding: 5px 15px;
 }
 
+/* .date-input{
+  width: 250px;
+} */
+
 #root {
   display: flex;
   margin: 0;
@@ -91,8 +95,9 @@ h4 {
 
 .marquee-container {
   height: 150px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(255, 0, 0, 0.896);
+  /* color: rgb(255, 255, 255); */
+  /* background-color: rgba(255, 0, 0, 0.896); */
+  background-color: white;
   margin-bottom: 20px;
   font-size: 10px;
   padding-top: 3px;
@@ -156,4 +161,133 @@ min-width: 135px;
   margin-bottom: 40px;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+
+
+.new-employee-div{ 
+  color: white;
+  /* border: 1px solid white; */
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  
+  gap: 15px;
+
+  /* border: 1px solid magenta; */
+  padding: 20px;
+}
+.new-employee-birth-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-employee-section{
+  background-image: linear-gradient(to top, #000729, #050c2b, #09112d, #0d1430, #121732);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* justify-content: center; */
+  /* border: 2px solid red; */
+  /* height: 80%; */
+  position: relative;
+}
+
+.new-employee-div div {
+  font-size: 12px;
+}
+
+.info-note{
+  width: 300px;
+  align-self: center;
+  margin-top:auto;
+  margin-bottom: 50px;
+  height: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid magenta;
+  background-color: rgba(255, 0, 255, 0.721);
+  color: white;
+}
+
+.info-note path{
+  color: white;
+  
+}
+
+h3{
+  color: rgba(0, 255, 94, 0.841);
+  margin-top: 50px;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+.letsgo{
+  /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
+  position: absolute;
+  bottom: 200px;
+}
+
+.new-emp-err-div{
+  /* border: 2px solid white; */
+  height: 40px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  /* margin-left: auto; */
+  margin-top: 50px;
+  padding: 10px;
+  gap: 10px;
+  align-self: center;
+}
+
+.new-emp-err-div div {
+  /* width: 180px; */
+width: 100%;
+}
+
+
+.new-employee-name-div , .new-employee-email-div , .new-employee-birth-div, .new-employee-service-div , .new-employee-projects-div , .new-employee-position-div {
+  /* border: 2px solid white; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
+  max-width: 400px;
+}
+
+.ant-picker {
+  /* margin: ; */
+}
+
+
+.new-employee-name-div label , .new-employee-email-div  label, .new-employee-birth-div label , .new-employee-service-div label, .new-employee-position-div label, .new-employee-projects-div label {
+  /* border: 2px solid red; */
+  width: 45%;
+  
+}
+
+
+
+.new-employee-birth-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
