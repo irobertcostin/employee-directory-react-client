@@ -12,6 +12,7 @@ function NewEmployee() {
     const [position,setPosition] = useState('');
     const [birthdate,setBirthdate] = useState('');
     const [projects,setProjects] = useState('');
+    const [empYears,setEmpYears] = useState('0');
 
     const [errors, setErrors] = useState([]);
 
@@ -58,9 +59,9 @@ function NewEmployee() {
         }
 
 
-        if(email==="" ){
+        if(email===""){
             errors.push("no email detected")
-        } else if (email.includes("@")==false){
+        } else if (email.includes("@")===false){
             errors.push('invalid email format')
         }
 
@@ -93,15 +94,18 @@ function NewEmployee() {
             let newEmployee = {
                 full_name:name,
                 email:email,
-                birth_date: birthdate,
+                birth_date: birthdate.$d,
+                employee_years:empYears,
                 service: service,
-                position:position,
-                birth_date:birthdate
+                other_projects:projects,
+                position:position
+                
             } 
 
-            
+        let api = new Data();
+        await api.addEmployee(newEmployee);
 
-
+        console.log(newEmployee)
 
         } 
     }
@@ -154,7 +158,7 @@ function NewEmployee() {
                 </div>
 
 
-                <Button type="primary" ghost className="letsgo" onClick={checkErrors}>Let`s GO</Button>
+                <Button type="primary" ghost className="letsgo" onClick={addEmployee}>Let`s GO</Button>
 
 
 

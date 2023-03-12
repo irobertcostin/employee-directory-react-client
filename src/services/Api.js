@@ -1,6 +1,6 @@
 export default class Data {
 
-    api(path,method='GET',body=null){
+    api(path,method="GET",body=null){
 
         const url = "http://localhost:3300"+path;
 
@@ -21,8 +21,9 @@ export default class Data {
 
         if(body!=null){
 
-
+            console.log(options.body)
             options.body=JSON.stringify(body);
+            console.log(options.body)
         }
 
         return fetch(url,options)
@@ -42,10 +43,10 @@ export default class Data {
     }
 
 
-    async addEmployee(employee){
+    async addEmployee(newEmployee){
         try {
-            let response = await this.api('/add',"POST",employee)
-            if(response.status==201){
+            let response = await this.api("/add","POST",newEmployee)
+            if(response.status===200){
                 console.log("Successfully added")
             }
         } catch (error) {
